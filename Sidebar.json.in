@@ -1,0 +1,11 @@
+{
+    \"Name\" : \"Sidebar\",
+    \"Version\" : \"0.0.1\",
+    \"CompatVersion\" : \"0.0.1\",
+    \"Vendor\" : \"Stepan_Kochetov\",
+    \"Copyright\" : \"\",
+    \"License\" : \"\",
+    \"Description\" : \"\",
+    \"Url\" : \"https://github.com/diggaz\",
+    $$dependencyList
+}
