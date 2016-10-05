@@ -10,10 +10,10 @@ Sidebar on the left side
 ![Screen](demo/sidebar_left_side.png?raw=true)
 
 ##Features
-To change the sidebar position, you can use a hot key Ctrl+Shift+P, or activate the menu Window->Change sidebar position
+To change the sidebar position, you can use a hot key Ctrl+Shift+P, or activate the menu Window->Change sidebar position.
+Sidebar changes position in EDIT mode and in DEBUG mode.
 
 ##Installation
-IMPORTANT: plugin's tested on 4.x Qt Creator's version
 
 ###From source
 1. Change sidebar.pro:
