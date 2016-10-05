@@ -2,10 +2,11 @@
     \"Name\" : \"Sidebar\",
     \"Version\" : \"0.0.1\",
     \"CompatVersion\" : \"0.0.1\",
-    \"Vendor\" : \"Stepan_Kochetov\",
-    \"Copyright\" : \"\",
-    \"License\" : \"\",
-    \"Description\" : \"\",
-    \"Url\" : \"https://github.com/diggaz\",
+    \"Vendor\" : \"Stepan Kochetov\",
+    \"Copyright\" : \"(C) 2016 Stepan Kochetov\",
+    \"License\" : \"LGPLv3\",
+    \"Category\" : \"Qt Creator\",
+    \"Description\" : \"Plugin Sidebar for QtCreator. It adds the ability to change the position of the sidebar (left / right)\",
+    \"Url\" : \"https://github.com/diggaz/QtCreatorSidebarPlugin\",
     $$dependencyList
 }

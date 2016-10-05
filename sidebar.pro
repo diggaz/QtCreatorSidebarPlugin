@@ -10,13 +10,17 @@ HEADERS += src/sidebarplugin.h \
 
 # Qt Creator linking
 
-## set the QTC_SOURCE environment variable to override the setting here
-QTCREATOR_SOURCES = $$(QTC_SOURCE)
-isEmpty(QTCREATOR_SOURCES):QTCREATOR_SOURCES=C:/Users/Max/Downloads/qt-creator-opensource-src-4.1.0/qt-creator
+## Either set the IDE_SOURCE_TREE when running qmake,
+## or set the QTC_SOURCE environment variable, to override the default setting
+isEmpty(IDE_SOURCE_TREE): IDE_SOURCE_TREE = $$(QTC_SOURCE)
+#isEmpty(IDE_SOURCE_TREE): IDE_SOURCE_TREE = "/home/user/creator4.0.0/qt-creator"
+isEmpty(IDE_SOURCE_TREE):error("Error. IDE_SOURCE_TREE variable must point to Qt Creator sources.")
 
-## set the QTC_BUILD environment variable to override the setting here
-IDE_BUILD_TREE = $$(QTC_BUILD)
-isEmpty(IDE_BUILD_TREE):IDE_BUILD_TREE=C:/Users/Max/Downloads/qt-creator-opensource-src-4.1.0/build-qtcreator-Desktop_Qt_5_7_0_MinGW_32bit-Release
+## Either set the IDE_BUILD_TREE when running qmake,
+## or set the QTC_BUILD environment variable, to override the default setting
+isEmpty(IDE_BUILD_TREE): IDE_BUILD_TREE = $$(QTC_BUILD)
+#isEmpty(IDE_BUILD_TREE): IDE_BUILD_TREE = "/home/user/creator4.0.0/build-qtcreator"
+isEmpty(IDE_BUILD_TREE):error("Error. IDE_BUILD_TREE variable must be set.")
 
 ## uncomment to build plugin into user config directory
 ## <localappdata>/plugins/<ideversion>
@@ -43,4 +47,4 @@ QTC_PLUGIN_RECOMMENDS += \
 
 ###### End _dependencies.pri contents ######
 
-include($$QTCREATOR_SOURCES/src/qtcreatorplugin.pri)
+include($$IDE_SOURCE_TREE/src/qtcreatorplugin.pri)
