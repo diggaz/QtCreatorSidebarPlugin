@@ -84,8 +84,8 @@ bool SidebarPlugin::initialize(const QStringList &/*arguments*/, QString */*erro
 
 void SidebarPlugin::extensionsInitialized()
 {
-    changePosition(Constants::EDIT_MODE, m_isSidebarOnLeftSide);
-    changePosition(Constants::DEBUG_MODE, m_isSidebarOnLeftSide);
+    changePosition(QLatin1String(Constants::EDIT_MODE), m_isSidebarOnLeftSide);
+    changePosition(QLatin1String(Constants::DEBUG_MODE), m_isSidebarOnLeftSide);
 }
 
 ExtensionSystem::IPlugin::ShutdownFlag SidebarPlugin::aboutToShutdown()
@@ -98,22 +98,22 @@ ExtensionSystem::IPlugin::ShutdownFlag SidebarPlugin::aboutToShutdown()
 void SidebarPlugin::readSettings()
 {
     QSettings *settings = Core::ICore::settings();
-    settings->beginGroup(Constants::SETTINGS_GROUP);
-    m_isSidebarOnLeftSide = settings->value(Constants::SETTINGS_SIDEBAR_POSITION, true).toBool();
+    settings->beginGroup(QLatin1String(Constants::SETTINGS_GROUP));
+    m_isSidebarOnLeftSide = settings->value(QLatin1String(Constants::SETTINGS_SIDEBAR_POSITION), true).toBool();
     settings->endGroup();
 }
 
 void SidebarPlugin::writeSettings()
 {
     QSettings *settings = Core::ICore::settings();
-    settings->beginGroup(Constants::SETTINGS_GROUP);
-    settings->setValue(Constants::SETTINGS_SIDEBAR_POSITION, m_isSidebarOnLeftSide);
+    settings->beginGroup(QLatin1String(Constants::SETTINGS_GROUP));
+    settings->setValue(QLatin1String(Constants::SETTINGS_SIDEBAR_POSITION), m_isSidebarOnLeftSide);
     settings->endGroup();
 }
 
 void SidebarPlugin::triggerAction()
 {
     m_isSidebarOnLeftSide = !m_isSidebarOnLeftSide;
-    changePosition(Constants::EDIT_MODE, m_isSidebarOnLeftSide);
-    changePosition(Constants::DEBUG_MODE, m_isSidebarOnLeftSide);
+    changePosition(QLatin1String(Constants::EDIT_MODE), m_isSidebarOnLeftSide);
+    changePosition(QLatin1String(Constants::DEBUG_MODE), m_isSidebarOnLeftSide);
 }
