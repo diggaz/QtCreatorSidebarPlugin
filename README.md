@@ -15,6 +15,10 @@ Sidebar changes position in EDIT mode and in DEBUG mode.
 
 ##Installation
 
+##Downloads
+Built plugin can be downloaded [here](https://sourceforge.net/projects/qtcreatorsidebarplugin/files/ "Sourceforge")
+or from github releases.
+
 ###From source
 1. Change sidebar.pro:
 
@@ -24,7 +28,7 @@ Sidebar changes position in EDIT mode and in DEBUG mode.
 2. Compile plugin.
 
 ###From binaries
-1. Extract/copy files from archive into Qt Creator's dir (archive already contains proper paths).
+1. Extract/copy plugin file into Qt Creator's dir. (QtCreator\lib\qtcreator\plugins)
 2. Enable plugin in Help->Modules menu.
 
 ## Copyright / License
