@@ -19,7 +19,7 @@ namespace Sidebar {
 namespace Internal {
 
 template <typename T>
-static T *getObject(QObject *parent)
+T *getObject(QObject *parent)
 {
     if (!parent)
         return 0;
@@ -42,10 +42,9 @@ void changePosition(const QString &objectName, bool isSidebarOnLeftSide)
 
     Core::NavigationWidgetPlaceHolder *nwPlaceHolder =
             getObject<Core::NavigationWidgetPlaceHolder>(context->widget());
-    if (nwPlaceHolder){
+    if (nwPlaceHolder) {
         QSplitter *splitter = qobject_cast<QSplitter *>(nwPlaceHolder->parent());
-        if (splitter && splitter->count() > 1)
-        {
+        if (splitter && splitter->count() > 1) {
             int index = isSidebarOnLeftSide ? 0 : 1;
             if (splitter->widget(index) != nwPlaceHolder)
                 splitter->insertWidget(0, splitter->widget(1));
