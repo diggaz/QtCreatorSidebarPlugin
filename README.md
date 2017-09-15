@@ -1,3 +1,5 @@
+# Deprecated
+
 ##Introduction
 The aim of this project is to add the ability to change the position of the sidebar (left / right)
 
